@@ -1,0 +1,35 @@
+# @package _global_
+# Training conditions of the paper weights.
+train_steps: 25000
+seed: 0
+use_bf16: false
+use_checkpointing: false
+img_size: 512
+target_size: ${img_size}
+down_factor: fixed
+backbone:
+  name: vit_base_patch16_dinov3.lvd1689m
+dataset:
+  root: ${dataroot}/imagenet/images
+train_dataloader:
+  batch_size: 4
+  num_workers: 8
+  shuffle: true
+optimizer:
+  lr: 2e-4
+  weight_decay: 1e-5
+  betas: [0.9, 0.999]
+loss:
+  mse:
+    loss_type: mse
+model:
+  dim: 128
+  heads_attn: 4
+  heads_rope: 4
+  kernel_size: 9
+  use_encoder: true
+  img_layers: 2
+  base_mode: bilinear
+  gate_params: 0.0
+  rope_base: 100.0
+  rope_rescale: 2.0

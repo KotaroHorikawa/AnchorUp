@@ -1,0 +1,14 @@
+data/
+__pycache__/
+*.nfs*
+output/
+.vscode
+DAVIS/
+.DS_Store
+checkpoints/
+*.pth
+*.py[cod]
+.venv/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/

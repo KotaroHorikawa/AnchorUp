@@ -1,0 +1,14 @@
+_target_: src.model.naf.NAF
+name: naf
+
+dim: 256
+heads_attn: 4
+heads_rope: 4
+kernel_size: 9
+
+# ImageEncoder options
+use_encoder: true
+img_layers: 2
+
+rope_base: 100.0
+rope_rescale: 2.0

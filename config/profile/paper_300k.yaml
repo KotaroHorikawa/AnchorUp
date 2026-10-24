@@ -1,0 +1,7 @@
+# @package _global_
+defaults:
+  - paper_25k
+  - _self_
+
+train_steps: 300000
+checkpoint_steps: [12500, 25000, 50000, 100000, 200000, 300000]
